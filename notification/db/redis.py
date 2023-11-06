@@ -9,3 +9,9 @@ redis = aioredis.from_url(HOST_ADDRESS, decode_responses=True)
 
 
 
+
+async def save_otp_to_redis(user_id: str, otp: str):
+    
+    key = f"user_{user_id}"
+
+    await redis.set(name=key, value=otp, ex=180)
