@@ -2,7 +2,7 @@ from random import randint
 
 from db.redis import save_otp_to_redis
 
-
+# Service to create otp and set it to redis
 class OTPService:
 
     def __init__(self) -> None:

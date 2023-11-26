@@ -8,7 +8,7 @@ HOST_ADDRESS: str = settings.REDIS_HOST_ADDRESS
 redis = aioredis.from_url(HOST_ADDRESS, decode_responses=True)
 
 
-
+# Redis check otp key 
 
 async def save_otp_to_redis(user_id: str, otp: str):
     

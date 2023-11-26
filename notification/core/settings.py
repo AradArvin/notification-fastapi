@@ -1,6 +1,8 @@
 from fastapi_mail import ConnectionConfig
 from decouple import config
 
+# Main email app data settings
+
 FASTAPI_MAIL_CONF = ConnectionConfig(
     MAIL_USERNAME = config("EMAIL_USERNAME"),
     MAIL_PASSWORD = config("EMAIL_PASSWORD"),

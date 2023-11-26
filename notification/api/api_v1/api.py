@@ -17,6 +17,9 @@ email_router = APIRouter()
 async def send_email(data: dict,
                      background_task: BackgroundTasks, 
                      otp_service: OTPService = Depends(),):
+    """
+    Get's user data and send an email to user email containing the otp for verification.
+    """
     
     data = jsonable_encoder(data) 
 
